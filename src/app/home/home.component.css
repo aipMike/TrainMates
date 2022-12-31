@@ -21,4 +21,47 @@
   color: rgb(219, 253, 255);
   margin: 0px;
   bottom: 0;
+  font-weight: 700;
+}
+
+.rotateimg180 {
+  -webkit-transform:rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.carouselImg{
+  filter: grayscale(50%);
+  filter: blur(1px);
+  border-radius: 10px;
+  width: 100%;
+}
+
+.carouselText{
+  position: absolute;
+  margin: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(23, 0, 163);
+  background-color: rgba(219, 253, 255, 0.5);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.cardLayout{
+  width: 90%;
+  justify-content: end;
+  border-radius: 10px;
+  transition: transform .2s;
+}
+
+.cardLayout:hover{
+  -webkit-transform: scale(1.5);
+  transform: scale(1.2);
+}
+
+.carouselImg:hover{
+  filter: blur(0px);
 }
