@@ -1,0 +1,24 @@
+.titleIntro{
+  text-align: center;
+  margin-top: 50px;
+  color: rgb(23, 0, 163);
+  font-weight: 700;
+}
+
+.textIntro{
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(219, 253, 255);
+}
+.titleSection{
+  margin-left: 50px;
+  color: rgb(23, 0, 163);
+  font-weight: 700;
+}
+
+.visTutto{
+  text-align: right;
+  color: rgb(219, 253, 255);
+  margin: 0px;
+  bottom: 0;
+}
