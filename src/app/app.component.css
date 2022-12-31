@@ -1,0 +1,97 @@
+.logo img{
+  width: 40%;
+}
+
+.loginbutton{
+  background-color: rgb(219, 253, 255);
+  font-weight: 700;
+  color: rgb(23, 0, 163);
+}
+
+.loginbutton:hover{
+  background-color: rgba(219, 253, 255, 0.7);
+}
+
+.navbar{
+  width: 100%;
+  min-height: 2cm;
+  background-color: rgb(20, 20, 20);
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-size: 100%;
+  z-index: 99;
+}
+
+.gridNavbar{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  ". . ."
+}
+
+.navbar-nav{
+    align-items: center;
+}
+
+.nav-link:hover{
+    color: rgba(219, 253, 255, 0.7);
+}
+
+.nav-link{
+    transition-duration: 0.2s;
+    color: rgb(219, 253, 255);
+    font-weight: 550;
+}
+
+a:hover{
+  color: rgba(219, 253, 255, 0.7);
+}
+
+
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+@media only screen and (max-width: 1400px){
+.gridNavbar{
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  ". ."
+}
+}
+
+@media only screen and (max-width: 991px){
+.gridNavbar{
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  ". ."
+}
+}
+
+@media only screen and (max-height: 400px){
+.cms_contenuto ul li{
+  margin-left: 2%;
+  float: right;
+}
+}
+
+@media only screen and (max-height: 800px){
+.cms_contenuto ul li{
+  margin-top: 4%;
+}
+}
+
