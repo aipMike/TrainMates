@@ -8,6 +8,8 @@ import { ClassificheComponent } from './classifiche/classifiche.component';
 import { CategorieComponent } from './categorie/categorie.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { InserisciTempoComponent } from './inserisci-tempo/inserisci-tempo.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { InserisciTempoComponent } from './inserisci-tempo/inserisci-tempo.compo
     ClassificheComponent,
     CategorieComponent,
     UserDashboardComponent,
-    InserisciTempoComponent
+    InserisciTempoComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
