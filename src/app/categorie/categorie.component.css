@@ -1,0 +1,48 @@
+.imgCat{
+  filter: grayscale(50%);
+  filter: blur(1px);
+  border-radius: 10px;
+  width: 100%;
+  transition: .5s;
+}
+
+.contImg{
+  width: 90%;
+  border-radius: 10px;
+  transition: transform .5s;
+  justify-content: end;
+}
+
+.contImg:hover{
+  -webkit-transform: scale(1.5);
+  transform: scale(1.2);
+  transition: transform .5s;
+}
+
+.imgText{
+  position: absolute;
+  margin: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  background-color: rgba(191, 191, 191, 0.5);
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.textHover{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.contImg:hover .imgText{
+  opacity: 1;
+  transition: .5s ease;
+}
+
+.contImg:hover .imgCat{
+  filter: blur(0px);
+  transition: .5s;
+}
