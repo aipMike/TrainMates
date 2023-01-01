@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  height: 420px;
+  margin: 0 auto;
+  width: 640px;
+  background-color: rgb(219, 253, 255);
+  margin-top: 100px;
+  justify-content: center;
+  border-radius: 30px;
+}
+
+label {
+  color:  rgb(23, 0, 163);
+  display: block;
+  font-size: 16px;
+  height: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 800px;
+}
+
+input {
+  background: transparent;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  font-size: 20px;
+  height: 30px;
+  line-height: 30px;
+  outline: none !important;
+  width: 100%;
+  color: rgb(191, 191, 191);
+  border-color: rgb(191, 191, 191);
+}
+
+input::-moz-focus-inner {
+  border: 0;
+}
+
+#submit {
+  color: rgb(191, 191, 191);
+  margin-top: 20px;
+  transition: color 150ms;
+  border: 0;
+}
+
+
+#submit:active {
+  color: rgb(23, 0, 163);
+}
+
+a{
+  text-decoration: none;
+  color: rgb(23, 0, 163);
+}

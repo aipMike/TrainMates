@@ -1,1 +1,11 @@
-<p>login works!</p>
+<div class="container">
+  <div class="form" style="margin-top: 70px; width: 450px;">
+    <label for="email">Email</label>
+    <input #email type="email" id="email" placeholder="Username o email">
+    <label for="password">Password</label>
+    <input #password type="password" id="password" placeholder="Inserisci password">
+    <a href="mailto:michele.corrado@studenti.unitn.it"><p style="margin-top: 5px; margin-bottom: 0px;">Hai dimenticato la password? Scrivici</p></a>
+    <a routerLink="/signup"><p>Non hai un account? Registrati</p></a>
+    <input type="submit" id="submit" value="Log in">
+  </div>
+</div>

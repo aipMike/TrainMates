@@ -1,1 +1,19 @@
-<p>signup works!</p>
+<div class="container">
+  <div class="form" style="margin-top: 70px; width: 450px;">
+    <label for="nome">Nome</label>
+    <input #nome type="nome" id="nome" placeholder="Nome">
+    <label for="cognome">Cognome</label>
+    <input #cognome type="cognome" id="cognome" placeholder="Cognome">
+    <label for="username">Username</label>
+    <input #username type="username" id="username" placeholder="Username">
+    <label for="email">Email</label>
+    <input #email type="email" id="email" placeholder="Email">
+    <label for="password">Password</label>
+    <input #password type="password" id="password" placeholder="Password" aria-describedby="passwordHelpBlock">
+    <small id="passwordHelpBlock" class="form-text text-muted">
+      La password deve avere 8-20 caratteri, deve contenere lettere e numeri e non deve contenere caratteri speciali o emoji.
+    </small>
+    <a routerLink="/login"><p style="margin-top: 20px;">Hai già un account? Accedi</p></a>
+    <input type="submit" id="submit" value="Submit">
+  </div>
+</div>
