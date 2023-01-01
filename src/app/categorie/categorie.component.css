@@ -1,3 +1,8 @@
+.title{
+  color: rgb(23, 0, 163);
+  font-weight: 700;
+}
+
 .imgCat{
   filter: grayscale(50%);
   filter: blur(1px);
