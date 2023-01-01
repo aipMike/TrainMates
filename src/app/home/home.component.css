@@ -65,3 +65,7 @@
 .carouselImg:hover{
   filter: blur(0px);
 }
+
+a{
+  text-decoration: none;
+}

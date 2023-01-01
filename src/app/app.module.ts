@@ -10,6 +10,7 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { InserisciTempoComponent } from './inserisci-tempo/inserisci-tempo.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SignupComponent } from './signup/signup.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
