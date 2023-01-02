@@ -1,1 +1,19 @@
-<p>inserisci-tempo works!</p>
+<div class="container">
+  <div class="form" style="margin-top: 70px; width: 450px;">
+    <label for="sport">Seleziona uno sport</label>
+    <select name="Sport" id="sport" class="filterDropdown text-muted">
+      <option value="" disabled selected class="text-muted">Sport</option>
+      <option value="corsa" class="text-muted">Corsa</option>
+      <option value="nuoto" class="text-muted">Nuoto</option>
+      <option value="ciclismo" class="text-muted">Ciclismo</option>
+      <option value="sci" class="text-muted">Sci</option>
+    </select>
+    <label for="type">Seleziona un tipo di gara</label>
+    <select name="type" id="type" class="filterDropdown text-muted">
+      <option value="" disabled selected class="text-muted">Gara</option>
+      <option value="100m" class="text-muted">100 Metri</option>
+    </select>
+    <p style="margin-top: 20px;">N.b. Questa è una versione di prova, non avendo il sensore, al click del pulsante verrà inserito a database un documento contenente l'orario preso istantaneamente, il quale corrisponderà a 0</p>
+    <input type="submit" id="submit" value="Passa a registrazione con sensore" (click)="insert()">
+  </div>
+</div>

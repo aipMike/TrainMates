@@ -10,6 +10,7 @@ import { Tempi } from '../tempi';
 export class ApiService {
 
   public times: Tempi[] = [];
+  public data: Date = new Date();
 
 
   constructor(private HttpClient: HttpClient) { }
@@ -49,6 +50,29 @@ export class ApiService {
       });
       console.log(this.times);
       return this.times;
+    }));
+  }
+
+  timeInsert(newTime: Tempi){
+    let body = JSON.stringify(newTime);
+    return this.HttpClient.post<any>('https://data.mongodb-api.com/app/trainmates-ugayt/endpoint/inserttime', body).pipe(map((dati) => {
+      return dati;
+    }));
+  }
+
+  timeDelete(time: Tempi){
+    return this.HttpClient.delete<any>('https://data.mongodb-api.com/app/trainmates-ugayt/endpoint/deletetime/' + time.id).pipe(map((dati) => {
+      return dati;
+    }));
+  }
+
+  getTypes(){
+    let indexedArray: {[key: string]: string}
+    return this.HttpClient.get<any>('https://data.mongodb-api.com/app/trainmates-ugayt/endpoint/gettypes').pipe(map((dati) => {
+      dati.forEach(element =>{
+        indexedArray[element[0]] = element[1];
+      })
+      return indexedArray;
     }));
   }
 }
