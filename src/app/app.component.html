@@ -9,12 +9,17 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="classifiche">Classifiche</a>
         </li>
-        <li class="nav-item" style="margin-right: 50px;">
-          <a class="nav-link disabled" routerLink="registra_tempo" *ngIf="!isLogged; else logged">Inserisci tempo</a>
+        <li class="nav-item" style="margin-right: 40px;">
+          <a class="nav-link disabled" routerLink="registra_tempo" *ngIf="isnotLogged; else logged">Inserisci tempo</a>
           <ng-template #logged><a class="nav-link" routerLink="registra_tempo">Inserisci tempo</a></ng-template>
         </li>
-        <li>
-          <a routerLink="login" class="btn loginbutton" style="margin-right: 50px;">Log in</a>
+        <li class="nav-item" style="width: 100px;">
+          <a routerLink="login" class="btn loginbutton" *ngIf="isnotLogged">Log in</a>
+          <a *ngIf="!isnotLogged" routerLink="/dashboard">
+          <span style="justify-content: center; display: flex; align-items: center; flex-direction: column;"><img src="../assets/user.png" style="width: 60%;">
+            <p class="username">{{ username }}</p>
+          </span>
+        </a>
         </li>
       </ul>
     </div>

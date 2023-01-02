@@ -39,9 +39,9 @@
 }
 
 .nav-link{
-    transition-duration: 0.2s;
-    color: rgb(219, 253, 255);
-    font-weight: 550;
+  transition-duration: 0.2s;
+  color: rgb(219, 253, 255);
+  font-weight: 550;
 }
 
 a:hover{
@@ -99,3 +99,9 @@ a{
   text-decoration: none;
 }
 
+.username{
+  margin-top: 10px;
+  color: rgb(219, 253, 255);
+  font-weight: 550;
+  transition-duration: 0.2s;
+}

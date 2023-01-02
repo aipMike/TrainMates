@@ -12,17 +12,18 @@ export class ApiService {
 
   getUsers(user: string, pass: string){
     let logged = false;
+    let username;
     return this.HttpClient.get<any>('https://data.mongodb-api.com/app/trainmates-ugayt/endpoint/login').pipe(map((dati) => {
       console.log(dati);
       dati.forEach(element => {
-        console.log(element);
         if(element.email == user || element.username == user){
           if(element.password == pass){
             logged = true;
+            username = element.username;
           }
         }
       });
-      return logged;
+      return [logged, username];
 
     }));
 /*
