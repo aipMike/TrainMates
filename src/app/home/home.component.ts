@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../service/api.service';
+import { Tempi } from '../tempi';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  tableTimesHome: Tempi[] = [];
+
+  constructor(private service: ApiService) { }
 
   ngOnInit(): void {
-
+    this.service.getTimes().subscribe(dati => {
+      this.tableTimesHome = dati;
+    });
   }
 
 }

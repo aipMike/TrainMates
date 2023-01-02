@@ -33,79 +33,14 @@
           <th scope="col">Sport</th>
           <th scope="col">Tipo di gara</th>
           <th scope="col">Tempo registrato</th>
-          <th scope="col">Miglior tempo</th>
         </tr>
       </thead>
       <tbody>
-        <tr style="background-color: rgb(219, 253, 255);">
-          <th scope="row">Johnny</th>
-          <td>Sit</td>
-          <td>Amet</td>
-          <td>Consectetur</td>
-          <td>Consectetur</td>
-        </tr>
-        <tr style="background-color: rgb(217, 217, 217);">
-          <th scope="row">Gigi</th>
-          <td>Adipisicing</td>
-          <td>Elit</td>
-          <td>Sint</td>
-          <td>Consectetur</td>
-        </tr>
-        <tr style="background-color: rgb(219, 253, 255);">
-          <th scope="row">Franco</th>
-          <td>Sit</td>
-          <td>Amet</td>
-          <td>Consectetur</td>
-          <td>Consectetur</td>
-        </tr>
-        <tr style="background-color: rgb(217, 217, 217);">
-          <th scope="row">Giulio</th>
-          <td>Adipisicing</td>
-          <td>Elit</td>
-          <td>Sint</td>
-          <td>Consectetur</td>
-        </tr>
-        <tr style="background-color: rgb(219, 253, 255);">
-          <th scope="row">Peppe</th>
-          <td>Sit</td>
-          <td>Amet</td>
-          <td>Consectetur</td>
-          <td>Consectetur</td>
-        </tr>
-        <tr style="background-color: rgb(217, 217, 217);">
-          <th scope="row">Giorgio</th>
-          <td>Adipisicing</td>
-          <td>Elit</td>
-          <td>Sint</td>
-          <td>Consectetur</td>
-        </tr>
-        <tr style="background-color: rgb(219, 253, 255);">
-          <th scope="row">Irene</th>
-          <td>Sit</td>
-          <td>Amet</td>
-          <td>Consectetur</td>
-          <td>Consectetur</td>
-        </tr>
-        <tr style="background-color: rgb(217, 217, 217);">
-          <th scope="row">Renata</th>
-          <td>Adipisicing</td>
-          <td>Elit</td>
-          <td>Sint</td>
-          <td>Consectetur</td>
-        </tr>
-        <tr style="background-color: rgb(219, 253, 255);">
-          <th scope="row">Gloria</th>
-          <td>Sit</td>
-          <td>Amet</td>
-          <td>Consectetur</td>
-          <td>Consectetur</td>
-        </tr>
-        <tr style="background-color: rgb(217, 217, 217);">
-          <th scope="row">Federica</th>
-          <td>Adipisicing</td>
-          <td>Elit</td>
-          <td>Sint</td>
-          <td>Consectetur</td>
+        <tr *ngFor="let time of tableTimes" style="background-color: rgb(219, 253, 255);">
+          <th scope="row">{{time.user}}</th>
+          <td>{{time.sport}}</td>
+          <td>{{time.type}}</td>
+          <td>{{time.time.getUTCHours()}}:{{time.time.getMinutes()}}:{{time.time.getSeconds()}}.{{time.time.getMilliseconds()}}</td>
         </tr>
       </tbody>
 
