@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ApiService } from '../service/api.service';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   logged = false;
 
-  constructor(private service: ApiService) { }
+  constructor(private service: ApiService, private main: AppComponent) { }
 
   ngOnInit(): void {
   }
@@ -26,6 +27,7 @@ export class LoginComponent implements OnInit {
       console.log(logged);
     });
     console.log(this.logged);
+    this.main.isLogged = this.logged;
   }
 
 }
