@@ -32,6 +32,14 @@ export class ApiService {
     }));
   }
 
+  signUp(name: string, surname: string, user: string, mail: string, pass: string){
+    let body = JSON.stringify({ nome: name, cognome: surname, username: user, email: mail, password: pass });
+    return this.HttpClient.post<any>('https://data.mongodb-api.com/app/trainmates-ugayt/endpoint/signup', body).pipe(map((dati) => {
+      console.log(dati);
+      return [dati, user];
+    }));
+  }
+
   getTimes(){
     this.times = [];
     return this.HttpClient.get<any>('https://data.mongodb-api.com/app/trainmates-ugayt/endpoint/gettimes').pipe(map((dati) => {
